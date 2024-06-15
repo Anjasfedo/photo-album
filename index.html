@@ -18,83 +18,142 @@
     />
   </head>
   <body
-    class="relative min-h-screen text-slate-300 text-sm sm:text-base flex flex-col"
+    class="relative min-h-screen text-slate-800 text-sm sm:text-base flex flex-col hover:transition-all duration-500"
   >
+    <!-- Mobile Menu Start -->
+    <div
+      class="fixed top-0 left-0 w-screen h-screen border-b bg-white z-50 hidden md:hidden flex-col gap-8 p-5 px-8"
+      id="menu"
+    >
+      <div class="flex items-center justify-between gap-4 border-b pb-2">
+        <h1 class="font-semibold">
+          Galeri <span class="text-indigo-400">Ku</span>
+        </h1>
+        <button class="outline-none border-none" id="close__menu__button">
+          <i class="fa-solid fa-xmark text-2xl"></i>
+        </button>
+      </div>
+      <div class="flex flex-col gap-4 flex-1">
+        <button
+          class="border-none outline-none p-2 group duration-200 cursor-pointer text-left"
+          id="heroButton"
+        >
+          <p
+            class="duration-200 group-hover:pl-2 poppins text-3xl font-semibold"
+          >
+            Hero <i class="fa-solid fa-chevron-right text-xl pl-4"></i>
+          </p>
+        </button>
+        <button
+          class="border-none outline-none p-2 group duration-200 cursor-pointer text-left"
+          id="galeriButton"
+        >
+          <p
+            class="duration-200 group-hover:pl-2 poppins text-3xl font-semibold"
+          >
+            Galeri <i class="fa-solid fa-chevron-right text-xl pl-4"></i>
+          </p>
+        </button>
+      </div>
+      <div class="flex flex-col items-center justify-center">
+        <div class="flex items-center gap-4">
+          <button class="bg-white p-2 border-2 border-slate-600 rounded-lg hover:border-indigo-400">
+            <p class="text-base sm:text-lg md:text-xl">Contact Us</p>
+          </button>
+        </div>
+      </div>
+    </div>
+    <!-- Mobile Menu End -->
+
+    <!-- Main Content Start -->
     <main class="flex flex-col">
       <div class="inset-0 opacity-10 absolute z-[-1] bgGrid"></div>
-      <div>
-        <section id="" class="min-h-screen flex flex-col px-4">
-          <div
-            class="bg-blue-950 fixed top-0 left-0 w-full flex flex-col z-20 px-3 fadeIn"
-          >
-            <header class="flex flex-col relative z-20">
-              <div
-                class="max-w-[1400px] mx-auto w-full flex items-center justify-between p-4 py-6"
-              >
-                <a href="/">
-                  <h1 class="font-semibold">
-                    Galeri <span class="text-indigo-400">Ku</span>
-                  </h1>
-                </a>
-                <button class="md:hidden grid place-items-center">
-                  <i class="fa-solid fa-bars"></i>
-                </button>
-                <nav class="hidden md:flex items-center gap-4 lg:gap-6">
-                  <a
-                    href="#"
-                    class="duration-200 hover:text-indigo-400 cursor-pointer"
-                    >Hero</a
-                  >
-                  <a
-                    href="#"
-                    class="duration-200 hover:text-indigo-400 cursor-pointer"
-                    >Galeri</a
-                  >
-                  <a
-                    href="#"
-                    class="duration-200 hover:text-indigo-400 cursor-pointer"
-                    >FAQ</a
-                  >
-                  <button class="specialButton">Contact Us</button>
-                </nav>
-              </div>
-            </header>
-          </div>
-          <div class="flex flex-col flex-1 max-w-[1400px] mx-auto w-full text-slate-600">
+      <!-- Hero Section Start -->
+      <section id="hero" class="min-h-screen flex flex-col px-4">
+        <div
+          class="bg-blue-950 fixed top-0 left-0 w-full flex flex-col z-20 px-3 text-white"
+          id="header__background"
+        >
+          <!-- Header Start -->
+          <header class="flex flex-col relative z-20">
             <div
-              class="flex flex-col gap-10 flex-1 items-center justify-center pt-20"
+              class="max-w-[1400px] mx-auto w-full flex items-center justify-between p-4 py-6"
             >
-              <h2
-                class="text-5xl sm:text-6xl md:text-7xl lg:text-8xl max-w-[1200px] mx-auto w-full text-center font-semibold"
+              <a href="/">
+                <h1 class="font-semibold">
+                  Galeri <span class="text-indigo-400">Ku</span>
+                </h1>
+              </a>
+              <button
+                class="md:hidden grid place-items-center"
+                id="open__menu__button"
               >
-                <span class="text-indigo-400">Galeri</span> Ku
-              </h2>
-              <p
-                class="text-xl sm:text-2xl md:text-3xl text-center max-w-[1000px] mx-auto w-full"
-              >
-                Galeri untuk
-                <span class="italic">Album</span> dan Foto.
-              </p>
-              <div class="flex items-center gap-4">
-                <button>
-                  <p class="text-base sm:text-lg md:text-xl">Contact Us</p>
-                </button>
-              </div>
+                <i class="fa-solid fa-bars"></i>
+              </button>
+              <nav class="hidden md:flex items-center gap-4 lg:gap-6">
+                <a
+                  href="#hero"
+                  class="duration-200 hover:text-indigo-400 cursor-pointer"
+                  >Hero</a
+                >
+                <a
+                  href="#galeri"
+                  class="duration-200 hover:text-indigo-400 cursor-pointer"
+                  >Galeri</a
+                >
+                <button class="bg-slate-600 p-2 border-2 border-white rounded-lg hover:border-indigo-400" id="header__contact">Contact Us</button>
+              </nav>
+            </div>
+          </header>
+        </div>
+        <!-- Header End -->
+
+        <!-- Hero Start -->
+        <div
+          class="flex flex-col flex-1 max-w-[1400px] mx-auto w-full text-slate-600"
+        >
+          <div
+            class="flex flex-col gap-10 flex-1 items-center justify-center pt-20"
+          >
+            <h2
+              class="text-5xl sm:text-6xl md:text-7xl lg:text-8xl max-w-[1200px] mx-auto w-full text-center font-semibold"
+            >
+              <span class="text-indigo-400">Galeri</span> Ku
+            </h2>
+            <p
+              class="text-xl sm:text-2xl md:text-3xl text-center max-w-[1000px] mx-auto w-full"
+            >
+              Galeri untuk
+              <span class="italic text-indigo-400">Album Foto</span>
+            </p>
+            <div class="flex items-center gap-4">
+              <button class="bg-indigo-400 text-white p-2 border-2 border-white rounded-lg hover:border-indigo-600">
+                <p class="text-base sm:text-lg md:text-xl">Contact Us</p>
+              </button>
             </div>
           </div>
-        </section>
+        </div>
+        <!-- Hero End -->
+      </section>
+      <!-- Hero Section End -->
 
-        <section class="min-h-screen flex flex-col px-20">
-          <div class="flex flex-col flex-1 max-w-[1400px] mx-auto w-full">
-            <div
-              class="flex gap-10 flex-wrap flex-1 items-center justify-center"
-              id="photoSection"
-            ></div>
-          </div>
-        </section>
-      </div>
+      <!-- Gallery Section Start -->
+      <section id="galeri" class="min-h-screen flex flex-col px-20">
+        <div class="flex flex-col flex-1 max-w-[1400px] mx-auto w-full">
+          <div
+            class="flex gap-10 flex-wrap flex-1 items-center justify-center"
+            id="photoSection"
+          ></div>
+        </div>
+      </section>
+      <!-- Gallery Section End -->
     </main>
-    <footer class="py-16 mt-12 sm:py-20 md:py-24 px-4 md:px-8 bg-blue-950">
+    <!-- Main Content End -->
+
+    <!-- Footer Start -->
+    <footer
+      class="py-16 mt-12 sm:py-20 md:py-24 px-4 md:px-8 bg-blue-950 text-slate-400"
+    >
       <div
         class="max-w-[1200px] mx-auto w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-8 text-base"
       >
@@ -102,7 +161,7 @@
           <h1 class="font-semibold">
             Galeri <span class="text-indigo-400">ku</span>
           </h1>
-          <p>2023 Galeri Ku LTD. All rights reserved.</p>
+          <p>2024 Galeri Ku. Lorem Ipsum Dolor</p>
         </div>
         <div class="flex flex-col gap-4">
           <p class="font-bold poppins text-base sm:text-lg">Support</p>
@@ -127,24 +186,26 @@
           <a
             href=""
             target="_blank"
-            class="cursor-pointer hover:text-indigo-400 duration-200"
-            ><i class="fa-brands fa-instagram pr-2"></i>Instagram</a
+            class="cursor-pointer hover:text-indigo-400 flex items-center justify-items-start"
+            ><i class="fa-brands fa-instagram pr-2 w-[25px]"></i>Instagram</a
           >
           <a
             href=""
             target="_blank"
-            class="cursor-pointer hover:text-indigo-400 duration-200"
-            ><i class="fa-brands fa-youtube pr-2"></i>Youtube</a
+            class="cursor-pointer hover:text-indigo-400 flex items-center justify-items-start"
+            ><i class="fa-brands fa-youtube pr-2 w-[25px]"></i>Youtube</a
           >
           <a
             href=""
             target="_blank"
-            class="cursor-pointer hover:text-indigo-400 duration-200"
-            ><i class="fa-brands fa-facebook pr-2"></i>Facebook</a
+            class="cursor-pointer hover:text-indigo-400 flex items-center justify-items-start"
+            ><i class="fa-brands fa-facebook pr-2 w-[25px]"></i>Facebook</a
           >
         </div>
       </div>
     </footer>
+    <!-- Footer End -->
+
     <script type="module" src="/main.js"></script>
   </body>
 </html>

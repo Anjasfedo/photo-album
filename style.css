@@ -28,58 +28,18 @@ span {
     linear-gradient(to bottom, black 1px, transparent 1px);
 }
 
-button,
-.button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: white;
-  cursor: pointer;
-  transition: border-color 0.2s;
-}
-
-button:hover {
-  border-color: #646cff;
-}
-
-button:focus,
-border:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
-
-.dropShadow {
-  filter: drop-shadow(-10.8923px 14.523px 35.0973px rgba(29, 140, 242, 0.2));
-}
-
-.fadeIn {
-  animation: fadeIn 500ms ease-in forwards;
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-  }
-}
-
 .title__image {
-   @apply text-white text-lg font-semibold w-full truncate text-center;
+   @apply text-lg font-semibold w-full truncate text-center py-2;
 }
 
 .img__image {
-   @apply mb-2;
+   @apply mb-2 transition ease-in-out hover:-translate-y-2;
 }
 
 .link__image {
-  @apply text-white text-sm underline hover:text-indigo-400;
+  @apply text-sm underline text-indigo-600 hover:text-indigo-400;
 }
 
 .div__image {
-   @apply bg-blue-900 rounded-lg overflow-hidden shadow-lg flex flex-col items-center justify-center m-4 p-4 min-w-[300px] max-w-[300px];
+   @apply border-l-8 border-blue-900 hover:border-indigo-400 text-slate-800 bg-white rounded-lg overflow-hidden shadow-lg flex flex-col items-center justify-center m-4 p-4 min-w-[300px] max-w-[300px] transition ease-in-out hover:-translate-y-2;
 }
