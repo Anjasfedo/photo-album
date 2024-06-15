@@ -1,7 +1,9 @@
+/* Tailwind CSS */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+/* Base behavior for all html element */
 html {
   scroll-behavior: smooth;
 }
@@ -10,6 +12,7 @@ html {
   font-family: "Open Sans", sans-serif;
 }
 
+/* Set poppins font family to some headers */
 h1,
 h2,
 h3,
@@ -17,17 +20,20 @@ h3,
   font-family: "Poppins", sans-serif;
 }
 
+/* Span inherit parent */
 span {
   font-family: inherit;
   font-weight: inherit;
 }
 
+/* The grid background */
 .bgGrid {
   background-size: 40px 40px;
-  background-image: linear-gradient(to right, black 1px, transparent 1px),
-    linear-gradient(to bottom, black 1px, transparent 1px);
+  background-image: linear-gradient(to right, grey 1px, transparent 1px),
+    linear-gradient(to bottom, grey 1px, transparent 1px);
 }
 
+/* Set base styling to gallery elements */
 .title__image {
    @apply text-lg font-semibold w-full truncate text-center py-2;
 }
@@ -40,6 +46,7 @@ span {
   @apply text-sm underline text-indigo-600 hover:text-indigo-400;
 }
 
+/* Galery elements container */
 .div__image {
-   @apply border-l-8 border-blue-900 hover:border-indigo-400 text-slate-800 bg-white rounded-lg overflow-hidden shadow-lg flex flex-col items-center justify-center m-4 p-4 min-w-[300px] max-w-[300px] transition ease-in-out hover:-translate-y-2;
+   @apply border-l-8 border border-blue-900 hover:border-indigo-400 text-slate-800 bg-white rounded-lg overflow-hidden shadow-lg flex flex-col items-center justify-center m-4 p-4 min-w-[300px] max-w-[300px] transition ease-in-out hover:-translate-y-2;
 }
