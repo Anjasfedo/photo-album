@@ -10,6 +10,13 @@ html {
   font-family: "Open Sans", sans-serif;
 }
 
+h1,
+h2,
+h3,
+.poppins {
+  font-family: "Poppins", sans-serif;
+}
+
 span {
   font-family: inherit;
   font-weight: inherit;
@@ -62,17 +69,17 @@ border:focus-visible {
 }
 
 .title__image {
-  @apply bg-red-900;
+   @apply text-white text-lg font-semibold w-full truncate text-center;
 }
 
 .img__image {
-  @apply bg-red-900;
+   @apply mb-2;
 }
 
 .link__image {
-  @apply bg-red-900;
+  @apply text-white text-sm underline hover:text-indigo-400;
 }
 
 .div__image {
-  @apply bg-red-900;
+   @apply bg-blue-900 rounded-lg overflow-hidden shadow-lg flex flex-col items-center justify-center m-4 p-4 min-w-[300px] max-w-[300px];
 }

@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function () {
         img.src = photo.thumbnailUrl;
         img.alt = photo.title;
 
-        const title = document.createElement("h3");
+        const title = document.createElement("p");
         title.classList.add("title__image")
         title.textContent = photo.title;
 
