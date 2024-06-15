@@ -2,6 +2,7 @@ import "./style.css";
 // Import helper functions
 import { hiddenElement, showElement } from "./libs";
 
+
 // Change header background color based on scroll
 const headerBackgroundOnScroll = () => {
   const fixedDiv = document.getElementById("header__background");
@@ -19,6 +20,7 @@ const headerBackgroundOnScroll = () => {
 
   window.addEventListener("scroll", handleScroll);
 };
+
 
 // Menu button behavior on mobile view (md:)
 const menuButtonOnClick = () => {
@@ -40,6 +42,7 @@ const menuButtonOnClick = () => {
   const heroButton = document.getElementById("heroButton");
   heroButton.addEventListener("click", () => {
     hiddenElement(menu);
+
     const heroSection = document.getElementById("hero");
     heroSection.scrollIntoView({ behavior: "smooth" });
   });
@@ -48,10 +51,12 @@ const menuButtonOnClick = () => {
   const galleryButton = document.getElementById("galleryButton");
   galleryButton.addEventListener("click", () => {
     hiddenElement(menu);
+
     const gallerySection = document.getElementById("gallery");
     gallerySection.scrollIntoView({ behavior: "smooth" });
   });
 };
+
 
 // Activate the function
 
@@ -60,7 +65,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   const photoSection = document.getElementById("photoSection");
 
   try {
-    // Fetch data from API
+    // Fetch data from API, only take photo that have albumId of 1
     const response = await fetch(
       "https://jsonplaceholder.typicode.com/photos?albumId=1"
     );
@@ -78,7 +83,7 @@ document.addEventListener("DOMContentLoaded", async () => {
       const img = document.createElement("img");
       img.classList.add("img__image");
       img.src = photo.thumbnailUrl;
-      img.alt = photo.title;
+      img.alt = `image-${photo.id}`;
 
       // Title of Image
       const title = document.createElement("p");
