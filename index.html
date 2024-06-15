@@ -5,7 +5,7 @@
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vite App</title>
-        <link
+    <link
       href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
     />
@@ -20,62 +20,79 @@
   <body
     class="relative min-h-screen text-slate-300 text-sm sm:text-base flex flex-col"
   >
-  <main class="flex flex-col">
-    <div class="inset-0 opacity-10 absolute z-[-1] bgGrid"></div>
-    <div>
-      <section id="" class="min-h-screen flex flex-col px-4">
-        <div
-          class="bg-blue-950 fixed top-0 left-0 w-full flex flex-col z-20 px-3 fadeIn"
-        >
-          <header class="flex flex-col relative z-20">
+    <main class="flex flex-col">
+      <div class="inset-0 opacity-10 absolute z-[-1] bgGrid"></div>
+      <div>
+        <section id="" class="min-h-screen flex flex-col px-4">
+          <div
+            class="bg-blue-950 fixed top-0 left-0 w-full flex flex-col z-20 px-3 fadeIn"
+          >
+            <header class="flex flex-col relative z-20">
+              <div
+                class="max-w-[1400px] mx-auto w-full flex items-center justify-between p-4 py-6"
+              >
+                <a href="/">
+                  <h1 class="font-semibold">
+                    Galeri <span class="text-indigo-400">Ku</span>
+                  </h1>
+                </a>
+                <button class="md:hidden grid place-items-center">
+                  <i class="fa-solid fa-bars"></i>
+                </button>
+                <nav class="hidden md:flex items-center gap-4 lg:gap-6">
+                  <a
+                    href="#"
+                    class="duration-200 hover:text-indigo-400 cursor-pointer"
+                    >Hero</a
+                  >
+                  <a
+                    href="#"
+                    class="duration-200 hover:text-indigo-400 cursor-pointer"
+                    >Galeri</a
+                  >
+                  <a
+                    href="#"
+                    class="duration-200 hover:text-indigo-400 cursor-pointer"
+                    >FAQ</a
+                  >
+                  <button class="specialButton">Contact Us</button>
+                </nav>
+              </div>
+            </header>
+          </div>
+          <div class="flex flex-col flex-1 max-w-[1400px] mx-auto w-full text-slate-600">
             <div
-              class="max-w-[1400px] mx-auto w-full flex items-center justify-between p-4 py-6"
+              class="flex flex-col gap-10 flex-1 items-center justify-center pt-20"
             >
-              <a href="/">
-                <h1 class="font-semibold">
-                  Galery <span class="text-indigo-400">Ku</span>
-                </h1>
-              </a>
-              <button class="md:hidden grid place-items-center">
-                <i class="fa-solid fa-bars"></i>
-              </button>
-              <nav class="hidden md:flex items-center gap-4 lg:gap-6">
-                <a
-                  href="#product"
-                  class="duration-200 hover:text-indigo-400 cursor-pointer"
-                  >Product</a
-                >
-                <a
-                  href="#review"
-                  class="duration-200 hover:text-indigo-400 cursor-pointer"
-                  >Review</a
-                >
-                <a
-                  href="#faq"
-                  class="duration-200 hover:text-indigo-400 cursor-pointer"
-                  >FAQ</a
-                >
-                <button class="specialButton">Start Today Buds</button>
-              </nav>
+              <h2
+                class="text-5xl sm:text-6xl md:text-7xl lg:text-8xl max-w-[1200px] mx-auto w-full text-center font-semibold"
+              >
+                <span class="text-indigo-400">Galeri</span> Ku
+              </h2>
+              <p
+                class="text-xl sm:text-2xl md:text-3xl text-center max-w-[1000px] mx-auto w-full"
+              >
+                Galeri untuk
+                <span class="italic">Album</span> dan Foto.
+              </p>
+              <div class="flex items-center gap-4">
+                <button>
+                  <p class="text-base sm:text-lg md:text-xl">Contact Us</p>
+                </button>
+              </div>
             </div>
-          </header>
-        </div>
-        <div class="flex flex-col flex-1 max-w-[1400px] mx-auto w-full">
-          <div
-            class="flex flex-col gap-10 flex-1 items-center justify-center pb-10 md:pb-14"
-          ></div>
-        </div>
-      </section>
+          </div>
+        </section>
 
-      <section class="min-h-screen flex flex-col px-20">
-        <div class="flex flex-col flex-1 max-w-[1400px] mx-auto w-full">
-          <div
-            class="flex gap-10 flex-wrap flex-1 items-center justify-center"
-            id="photoSection"
-          ></div>
-        </div>
-      </section>
-    </div>
+        <section class="min-h-screen flex flex-col px-20">
+          <div class="flex flex-col flex-1 max-w-[1400px] mx-auto w-full">
+            <div
+              class="flex gap-10 flex-wrap flex-1 items-center justify-center"
+              id="photoSection"
+            ></div>
+          </div>
+        </section>
+      </div>
     </main>
     <footer class="py-16 mt-12 sm:py-20 md:py-24 px-4 md:px-8 bg-blue-950">
       <div
@@ -83,9 +100,9 @@
       >
         <div class="flex flex-col gap-4 md:col-span-2">
           <h1 class="font-semibold">
-            Galery <span class="text-indigo-400">ku</span>
+            Galeri <span class="text-indigo-400">ku</span>
           </h1>
-          <p>2023 Galery Ku LTD. All rights reserved.</p>
+          <p>2023 Galeri Ku LTD. All rights reserved.</p>
         </div>
         <div class="flex flex-col gap-4">
           <p class="font-bold poppins text-base sm:text-lg">Support</p>
